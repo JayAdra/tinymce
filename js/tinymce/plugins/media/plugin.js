@@ -200,7 +200,7 @@ tinymce.PluginManager.add('media', function(editor, url) {
 				var beforeObjects, afterObjects, i, y;
 
 				beforeObjects = editor.dom.select('img[data-mce-object]');
-				editor.insertContent(dataToHtml(this.toJSON()));
+				editor.insertContent("<div class='video-container'>" + dataToHtml(this.toJSON()) + "</div>");
 				afterObjects = editor.dom.select('img[data-mce-object]');
 
 				// Find new image placeholder so we can select it
